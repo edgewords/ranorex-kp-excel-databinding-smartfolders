@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modulegroupdoc
+rxversion="8.3">
+  <testsuiteentryhierarchy>
+    <flatlistofchildren>
+      <modulegroups
+      name="ExcelDatadriveLoopAndCapture"
+      id="adc3f2f6-7c6d-4dce-b602-ac0b3d83f36c"/>
+    </flatlistofchildren>
+    <childhierarchy>
+      <modulegroups
+      name="ExcelDatadriveLoopAndCapture"
+      id="adc3f2f6-7c6d-4dce-b602-ac0b3d83f36c"/>
+    </childhierarchy>
+  </testsuiteentryhierarchy>
+</modulegroupdoc>

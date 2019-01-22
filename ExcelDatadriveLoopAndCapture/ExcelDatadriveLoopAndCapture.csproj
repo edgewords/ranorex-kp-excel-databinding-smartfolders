@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{3C909C25-9EB3-4F64-817E-72DFA5E5F69C}</ProjectGuid>
+    <TargetFrameworkProfile />
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ExcelDatadriveLoopAndCapture</RootNamespace>
+    <AssemblyName>ExcelDatadriveLoopAndCapture</AssemblyName>
+    <RanorexVersion>8.3</RanorexVersion>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <RanorexTargetsPath>$(MSBuildProgramFiles32)\MSBuild\Ranorex$(RanorexVersion)\Ranorex.MSBuild.Targets</RanorexTargetsPath>
+    <projectdefaultrepository>fdb0ebef-7998-420b-b3bf-9987ae3048b9</projectdefaultrepository>
+    <StartAction>Project</StartAction>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>True</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel" />
+    <Reference Include="Ranorex.Bootstrapper">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Core.Resolver">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Cef">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.ChromeWeb">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Delphi">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.FirefoxWeb">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Flex">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Java">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Mobile">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Msaa">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Office">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Qt">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.RawText">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Sap">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Uia">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Web">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.WebDriver">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Win32">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.WinForms">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Ranorex.Plugin.Wpf">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <id>71b20be5-a2bc-49ec-9228-bb8e2ac3c380</id>
+    </Compile>
+    <Compile Include="ChangeBinding.cs">
+      <id>d61f98df-fe8a-443c-a2a6-d40eb30179d2</id>
+    </Compile>
+    <Compile Include="ExcelDatadriveLoopAndCaptureRepository.cs">
+      <BoundTo>fdb0ebef-7998-420b-b3bf-9987ae3048b9</BoundTo>
+      <DependentUpon>ExcelDatadriveLoopAndCaptureRepository.rxrep</DependentUpon>
+      <RepositoryCode>true</RepositoryCode>
+      <id>9f26387e-e413-4e66-862e-e8eac819555c</id>
+    </Compile>
+    <Compile Include="GatherArticles.cs">
+      <BoundTo>5ec6ca65-59d6-4319-8daa-5c507a2e7add</BoundTo>
+      <DependentUpon>GatherArticles.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>a421ed85-ce01-4c07-835a-e7711afff0ab</id>
+    </Compile>
+    <Compile Include="GatherArticles.UserCode.cs">
+      <BoundTo>5ec6ca65-59d6-4319-8daa-5c507a2e7add</BoundTo>
+      <DependentUpon>GatherArticles.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>a99a57cf-1fcb-4f52-979b-43a4c4c8d285</id>
+    </Compile>
+    <Compile Include="Program.cs">
+      <id>219875e7-94f6-41cc-b432-7ebb9252d958</id>
+    </Compile>
+    <Compile Include="Recording1.cs">
+      <BoundTo>71647ff5-7c1e-4181-81f5-8199dcb48cd4</BoundTo>
+      <DependentUpon>Recording1.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>ecf5e7fc-fa3d-4feb-84e6-fa2bc8813447</id>
+    </Compile>
+    <Compile Include="Recording1.UserCode.cs">
+      <BoundTo>71647ff5-7c1e-4181-81f5-8199dcb48cd4</BoundTo>
+      <DependentUpon>Recording1.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>5859b418-c7c6-4e8b-bb0f-41a8d779a57e</id>
+    </Compile>
+    <Compile Include="Search.cs">
+      <BoundTo>855c7092-1538-4620-babc-ab3cf50dbbbe</BoundTo>
+      <DependentUpon>Search.rxrec</DependentUpon>
+      <RecorderCode>true</RecorderCode>
+      <id>aaa950e4-ac24-4579-8b08-0f4e09d51341</id>
+    </Compile>
+    <Compile Include="Search.UserCode.cs">
+      <BoundTo>855c7092-1538-4620-babc-ab3cf50dbbbe</BoundTo>
+      <DependentUpon>Search.rxrec</DependentUpon>
+      <UserCode>true</UserCode>
+      <id>e82c03c5-bfd1-46f9-94fa-b1c396fe2e21</id>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ExcelSmartFolders.rxtst">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <id>3084583a-6b8d-4c36-98c6-20bfb5ea0660</id>
+    </Content>
+    <None Include="app.config">
+      <id>d60fb94b-771b-4e3d-9f44-4a8afad2c0d1</id>
+    </None>
+    <Content Include="ExcelDatadriveLoopAndCapture.rxsqc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <id>dcd7a0c8-608e-4ee0-93b9-094a251ed12d</id>
+    </Content>
+    <None Include="ExcelDatadriveLoopAndCaptureRepository.rximg">
+      <BoundTo>fdb0ebef-7998-420b-b3bf-9987ae3048b9</BoundTo>
+      <DependentUpon>ExcelDatadriveLoopAndCaptureRepository.rxrep</DependentUpon>
+      <imageblob>true</imageblob>
+      <id>e4a7f8db-a4a2-47ca-a279-fbfe52634035</id>
+    </None>
+    <None Include="ExcelDatadriveLoopAndCaptureRepository.rxrep">
+      <id>fdb0ebef-7998-420b-b3bf-9987ae3048b9</id>
+      <repoid>ebe88d47-1c13-4a8f-aa74-e08abd5e079c</repoid>
+      <reporootid>d8f117c2-421b-4149-ad7b-f1554ef9f939</reporootid>
+    </None>
+    <None Include="GatherArticles.rxrec">
+      <BoundTo>fdb0ebef-7998-420b-b3bf-9987ae3048b9</BoundTo>
+      <id>5ec6ca65-59d6-4319-8daa-5c507a2e7add</id>
+      <recordtableid>02c5d645-aa8f-4ac3-825f-1cb450c67a3e</recordtableid>
+    </None>
+    <None Include="Recording1.rxrec">
+      <BoundTo>fdb0ebef-7998-420b-b3bf-9987ae3048b9</BoundTo>
+      <id>71647ff5-7c1e-4181-81f5-8199dcb48cd4</id>
+      <recordtableid>bfd23923-cf23-4e30-833a-b4880a1278df</recordtableid>
+    </None>
+    <None Include="TestData\data.xlsx">
+      <id>826d7522-e463-440e-9661-f083649cefcc</id>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Search.rxrec">
+      <BoundTo>fdb0ebef-7998-420b-b3bf-9987ae3048b9</BoundTo>
+      <id>855c7092-1538-4620-babc-ab3cf50dbbbe</id>
+      <recordtableid>5d5c6713-ac52-4586-8366-209d08fd0e47</recordtableid>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ExcelDatadriveLoopAndCapture.rxtmg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <id>0ccd9a49-ab08-47f8-be7f-cf383a1d3284</id>
+    </Content>
+    <Content Include="ExcelDatadriveLoopAndCapture.rxtst">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <id>b6c9d316-1c13-4943-b269-e870ceea516b</id>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="TestData">
+      <id>71aa556f-c10c-4ed5-8569-8df1954f2a39</id>
+    </Folder>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(RanorexTargetsPath)" Condition="Exists('$(RanorexTargetsPath)')" />
+</Project>

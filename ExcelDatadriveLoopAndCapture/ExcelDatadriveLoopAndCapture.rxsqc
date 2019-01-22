@@ -1,0 +1,12 @@
+[
+  {
+    "Enabled": "True",
+    "TestSuite": "ExcelDatadriveLoopAndCapture",
+    "RunConfig": "TestRun"
+  },
+  {
+    "Enabled": "True",
+    "TestSuite": "ExcelSmartFolders",
+    "RunConfig": "Default"
+  }
+]

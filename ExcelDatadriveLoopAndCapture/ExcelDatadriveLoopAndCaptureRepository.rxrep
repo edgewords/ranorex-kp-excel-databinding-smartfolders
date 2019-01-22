@@ -1,0 +1,140 @@
+﻿<repository
+id="ebe88d47-1c13-4a8f-aa74-e08abd5e079c"
+name="ExcelDatadriveLoopAndCaptureRepository"
+rxversion="8.3">
+	<codegen
+	classname="ExcelDatadriveLoopAndCaptureRepository"
+	namespace="ExcelDatadriveLoopAndCapture">
+	</codegen>
+	<rootfolder
+	capname="unknown"
+	id="d8f117c2-421b-4149-ad7b-f1554ef9f939"
+	isrooted="True"
+	name="Root"
+	searchtimeout="0ms"
+	usecache="True">
+		<appfolder
+		addcaps="container,webdocument"
+		capname="webdocument"
+		id="82b4623e-ffe9-48b8-b6ba-62b3d6404c80"
+		isrooted="True"
+		name="EdgewordsTrainingAutomatedSoftware"
+		searchtimeout="30000ms"
+		usecache="False">
+			<folder
+			capname="ultag"
+			id="18033a7b-5313-4755-b1f0-f3e6ea91b07f"
+			isrooted="True"
+			name="MenuMain"
+			searchtimeout="30000ms"
+			usecache="False">
+				<item
+				addcaps="unknown,webelement,atag"
+				capname="atag"
+				id="655ce6c9-b0d1-4471-86d5-d96e3329c28e"
+				name="Search"
+				refimgid="dd71c6c1-0422-4608-ac4f-3ba6b02ee922"
+				searchtimeout="30000ms">
+					/dom[@domain='www.edgewordstraining.co.uk' and @state='complete']//ul[#'menu-main']/?/?/a[@title='Search']
+				</item>
+				<item
+				addcaps="unknown,webelement,inputtag"
+				capname="inputtag"
+				id="8eeb1ee5-f880-484c-b42b-65b1499c4b5a"
+				name="InputTagS"
+				refimgid="fe3fe204-cdc4-47c6-8e34-c75b19fc6613"
+				searchtimeout="30000ms">
+					/dom[@domain='www.edgewordstraining.co.uk' and @state='complete']//ul[#'menu-main']/li[9]/?/?/form[@action='https://www.edgewordstraining.co.uk/']//input[@name='s']
+				</item>
+				<item
+				addcaps="unknown,webelement,inputtag"
+				capname="inputtag"
+				id="0891cd0d-a057-4019-af7b-81e5aa34df3a"
+				name="Submit"
+				refimgid="547a213d-37e3-44fa-b892-5f8b71348d3d"
+				searchtimeout="30000ms">
+					/dom[@domain='www.edgewordstraining.co.uk' and @state='complete']//ul[#'menu-main']/li[9]/?/?/form[@action='https://www.edgewordstraining.co.uk/']//input[@type='submit']
+				</item>
+				<basepath>
+					/dom[@domain='www.edgewordstraining.co.uk' and @state='complete']//ul[#'menu-main']
+				</basepath>
+			</folder>
+			<folder
+			capname="articletag"
+			comment="Rooted Folder finds 8 articles for ranorex"
+			id="b31228fc-287f-4023-87f9-e9021aaab1dc"
+			isrooted="True"
+			name="Articles"
+			refimgid="c314573a-4467-4cc7-8684-67b3c59c7151"
+			searchtimeout="30000ms"
+			usecache="False">
+				<item
+				addcaps="unknown,webelement,h2tag"
+				capname="h2tag"
+				comment="but only one h2 inside. :("
+				id="7885bf79-510d-456f-b321-98d841a04dee"
+				name="EntryTitleFusionPostTitle"
+				refimgid="acb8555c-9c2e-43fc-8f11-4dfd8f1e1d60"
+				searchtimeout="30000ms">
+					/dom[@domain='www.edgewordstraining.co.uk' and @state='complete']//div[#'posts-container']//article//h2
+				</item>
+				<basepath>
+					/dom[@domain='www.edgewordstraining.co.uk' and @state='complete']//div[#'posts-container']//article
+				</basepath>
+			</folder>
+			<item
+			capname="h2tag"
+			comment="Looking for article heards in one rxpath finds 8 as explected"
+			id="17f9820c-2e06-4e2a-9ad3-63f654d838cf"
+			name="ArticleHeaders"
+			searchtimeout="30000ms">
+				/dom[@domain='www.edgewordstraining.co.uk' and @state='complete']//div[#'posts-container']//article//h2
+			</item>
+			<item
+			capname="divtag"
+			id="76e2987d-f200-4e07-a095-f847ec5cd41d"
+			name="ArticleBody"
+			searchtimeout="30000ms">
+				/dom[@domain='www.edgewordstraining.co.uk' and @state='complete']//div[#'posts-container']//article//div[@class='fusion-post-content-container']
+			</item>
+			<item
+			addcaps="unknown,webelement,spantag"
+			capname="spantag"
+			id="75d4d7e6-7a97-41cd-b14e-cc3925e6f431"
+			name="Next"
+			refimgid="01e1ab05-59e5-42ad-9313-6d03aac9e5f2"
+			searchtimeout="30000ms">
+				/dom[@domain='www.edgewordstraining.co.uk' and @state='complete']//div[#'posts-container']//a[@class='pagination-next']/span[@innertext='Next']
+			</item>
+			<item
+			capname="divtag"
+			id="c32dc442-1451-4832-b5a1-4ebf32e60f45"
+			name="PostsContainer"
+			searchtimeout="30000ms">
+				/dom[@domain='www.edgewordstraining.co.uk' and @state='complete']//div[#'posts-container']
+			</item>
+			<basepath>
+				/dom[@domain='www.edgewordstraining.co.uk' and @state='complete']
+			</basepath>
+			<icon>
+				iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
+AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAGHRFWHRTb2Z0d2FyZQBQYWlu
+dC5ORVQgdjMuMzE3g3eGAAACKklEQVQ4T43R20vTcRjHcS/6G4Kgyy6KKKjwJogIDBJjIBUt2YVD
+yoGVmWUWzozMC92YaWqeSE1s0dThOtjBWUlKkMxDudXU1lCU6XSepzu82+/nvNrX6APP1e95Xt/f
+9/vEbaWh7TO1xi4qmjspfWKhuLqN++VGtLqn5BTVk1lQRbRVHGn4X8nTNclYtD020smBYDjaHhsJ
+cIxPbY8YIr+9viEGgqGwDBxLvixXfGJaLCLdedUfCwRDyPDKWoiF5SAuT0AMSA+2BXhXZqmydFBu
+bkfbmkFpayPOyQW8CwHs7jUxIN1NOkEa1llLGA7bsYX7KbTd4GiuiUuVbxhyzTMwuiwGpFX5lkLU
+dFjJ+55Mw5yGGpsRtX6Kk2Ue9jWewtBRx9eRJTEg7XnWF+TBo25SzUmo3inINLjIKoPD1QXsbNvN
+6fxr9Az5xIDm9kOm5gLce+xEW/aF1BYlCmshSr2PMxm32HV3B8ez0/jQPycG1NklTMxsUGUaQaMD
+lc7EIcse4vXJJF18xX7FVUpq6njd5xUDKVeKcE2v4xib52bxIAdza9mbf4CE9OscUZo5q3nO295p
+zD0zYuBcegHOCb+8KpvDi6G5hRMX8klIKaei6b083PdjCdNHjxhQqO/gcPsj77CB27PO2OQa9j+r
+8tq+/VyODC/yaXBxeyBRlUPv8Dzt3eO86PrNs85Rml7+ot7soLrVTqVpsypMTjGQcD5L/vC/tTkV
+F/cXNG0rDkAnVtkAAAAASUVORK5CYII=
+			</icon>
+		</appfolder>
+		<basepath>
+		</basepath>
+	</rootfolder>
+	<variables>
+	</variables>
+</repository>
